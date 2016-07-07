@@ -26,18 +26,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {	\
 
-  { /* FN layer 0, qwerty for OS based qwerty -> dvorak translation */
+    { /* FN layer 0, qwerty for OS based qwerty -> dvorak translation */
     {KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T,                                      KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC }, \
     {KC_FN15, KC_A, KC_S, KC_D, KC_F, KC_G,                                      KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT}, \
     {KC_LALT, KC_Z, KC_X, KC_C, KC_V, KC_B,                                      KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_0}, \
-    {KC_LGUI, KC_DELETE, KC_ESC, MY_RO, KC_BSPC, KC_FN13,                        KC_FN14, KC_FN11, MY_KANA, KC_ESC, KC_ENT, KC_PGDN} \
+    {KC_LGUI, KC_DELETE, KC_ESC, MY_RO, KC_FN13, KC_FN16,                        KC_FN14, KC_FN11, MY_KANA, KC_ESC, KC_ENT, KC_PGDN} \
   }, \
 
   { /* FN layer 1, numbers, arrows, and extended punctuation */
     {KC_GRAVE, KC_1, KC_2, KC_3, KC_4, KC_5,                                            KC_6, KC_7, KC_8, KC_9, KC_0, KC_RBRACKET }, \
     {KC_TRNS, KC_FN23, KC_FN24, KC_FN25, KC_FN26, KC_FN27,                              KC_PGUP, KC_MINUS, KC_EQUAL, KC_FN28, KC_FN29, KC_BSLASH}, \
     {KC_TRNS, KC_FN30, KC_FN31, KC_LEFT, KC_RIGHT, KC_RBRACKET,                         KC_PGDN, KC_UP, KC_DOWN, KC_DOT, KC_SLSH, KC_FN5}, \
-    {KC_TRNS, KC_BSPC, KC_FN1, KC_0, KC_RALT, KC_TRNS,                                  KC_TRNS, KC_TRNS, KC_RSFT, KC_FN1, ACTION_MODS_TAP_KEY(KC_RALT, KC_ENT), KC_PGDN} \
+    {KC_TRNS, KC_BSPC, KC_FN1, KC_TRNS, KC_TRNS, KC_TRNS,                               KC_TRNS, KC_TRNS, KC_RSFT, KC_FN1, ACTION_MODS_TAP_KEY(KC_RALT, KC_ENT), KC_PGDN} \
   },								       \
 
   { /* FN layer 2, F# and media keys */
@@ -114,6 +114,7 @@ const uint16_t PROGMEM fn_actions[] = {
 
   [14]  = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_ENT), // FN14, CTRL or Enter
   [15]  = ACTION_MODS_ONESHOT(MOD_LSFT), // one shot mod for shift
+  [16]  = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_BSPC), // FN14, CTRL or Enter
 
   // Handle "shifted" keys
   [23]  = ACTION_MODS_KEY(MOD_LSFT, KC_8),
