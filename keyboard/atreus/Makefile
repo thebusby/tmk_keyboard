@@ -55,8 +55,8 @@ SRC =	keymap_common.c \
 	matrix.c \
 	led.c
 
-KEYMAP ?= alan
-SRC := keymap_$(KEYMAP).c $(SRC)
+# KEYMAP ?= alan
+# SRC := keymap_$(KEYMAP).c $(SRC)
 
 CONFIG_H = config.h
 
