@@ -21,9 +21,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {	\
 
   { /* FN layer 0, qwerty for OS based qwerty -> dvorak translation */
     {KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T,                                      KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC }, \
-    {KC_LSFT, KC_A, KC_S, KC_D, KC_F, KC_G,                                      KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT}, \
+    {KC_FN15, KC_A, KC_S, KC_D, KC_F, KC_G,                                      KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT}, \
     {KC_LALT, KC_Z, KC_X, KC_C, KC_V, KC_B,                                      KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_0}, \
-    {KC_LGUI, KC_DELETE, KC_ESC, KC_RO, KC_BSPC, KC_FN13,                        KC_LCTL, KC_FN11, KC_KANA, KC_ESC, KC_ENT, KC_PGDN} \
+    {KC_LGUI, KC_DELETE, KC_ESC, KC_RO, KC_BSPC, KC_FN13,                        KC_FN14, KC_FN11, KC_KANA, KC_ESC, KC_ENT, KC_PGDN} \
   }, \
 
   { /* FN layer 1, numbers, arrows, and extended punctuation */
@@ -104,6 +104,9 @@ const uint16_t PROGMEM fn_actions[] = {
   [11]  = ACTION_LAYER_TAP_KEY(1, KC_SPC),  // FN11, to Fn overlap or space
   [12]  = ACTION_LAYER_TAP_KEY(4, KC_SPC),  // FN12, to Fn overlap or space
   [13]  = ACTION_LAYER_TAP_KEY(1, KC_BSPC), // FN13, to Fn overlap or backspace
+
+  [14]  = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_ENT), // FN14, CTRL or Enter
+  [15]  = ACTION_MODS_ONESHOT(MOD_LSFT), // one shot mod for shift
 };
 
 void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
