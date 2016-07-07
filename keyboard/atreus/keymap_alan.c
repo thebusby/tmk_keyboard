@@ -10,8 +10,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {	\
   { /* FN layer 0, qwerty for OS based qwerty -> dvorak translation */
     {KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T,                                      KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC }, \
     {ACTION_MODS_TAP_KEY(MOD_LSFT, ACTION_MODS_ONESHOT(MOD_LSFT)), KC_A, KC_S, KC_D, KC_F, KC_G,        KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT}, \
-    {KC_LALT, KC_Z, KC_X, KC_C, KC_V, KC_B,                                      KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_FN3}, \
-    {KC_LGUI, KC_DELETE, KC_ESC, KC_O, KC_BSPC, KC_FN13,                          ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ENT), KC_FN11, KC_KANA, KC_ESC, ACTION_MODS_TAP_KEY(MOD_RSFT, KC_ENT), KC_PGDN} \
+    {KC_LALT, KC_Z, KC_X, KC_C, KC_V, KC_B,                                      KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_0}, \
+    {KC_LGUI, KC_DELETE, KC_ESC, KC_RO, KC_BSPC, KC_FN13,                         ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ENT), KC_FN11, KC_KANA, KC_ESC, ACTION_MODS_TAP_KEY(MOD_RSFT, KC_ENT), KC_PGDN} \
   }, \
 
   { /* FN layer 1, numbers, arrows, and extended punctuation */
@@ -25,14 +25,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {	\
     {KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,                                      KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12 }, \
     {KC_NO, KC_0, KC_NO, KC_MEDIA_STOP, KC_NO, KC_AUDIO_VOL_UP,                     KC__VOLUP, KC_MEDIA_REWIND, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_FAST_FORWARD, KC_NO, KC_NO}, \
     {KC_FN5, KC_VOLU, KC_VOLD, KC_MPLY, KC_AUDIO_MUTE, KC_AUDIO_VOL_DOWN,           KC__VOLDOWN, KC__MUTE, KC_NO, KC_NO, KC_NO, KC_FN3}, \
-    {KC_NO, KC_NO, KC_NO, KC_NO, KC_FN0, KC_FN0,                                    KC_FN2, KC_FN2, KC_NO, KC_NO, KC_RALT, KC_PGDN} \
+    {KC_NO, KC_NO, KC_NO, KC_FN3, KC_FN0, KC_FN0,                                   KC_FN2, KC_FN2, KC_NO, KC_FN3, KC_RALT, KC_PGDN} \
   },									\
 
   { /* FN layer 3, hardware dvorak of layer 1 */
     {KC_TAB,  KC_QUOT, KC_COMM, KC_DOT, KC_P, KC_Y,         KC_F, KC_G, KC_C, KC_R, KC_L, KC_SLASH }, \
     {KC_LSFT, KC_A, KC_O, KC_E, KC_U, KC_I,                 KC_D, KC_H, KC_T, KC_N, KC_S, KC_MINUS}, \
     {KC_LALT, KC_SCLN, KC_Q, KC_J, KC_K, KC_X,              KC_B, KC_M, KC_W, KC_V, KC_Z, KC_FN3}, \
-    {KC_LGUI, KC_DELETE, KC_ESC, KC_RO, KC_BSPC, KC_FN6,    KC_LCTL, KC_FN12, KC_KANA, KC_ESC, KC_ENT, KC_PGDN}	\
+    {KC_LGUI, KC_DELETE, KC_ESC, KC_RO, KC_BSPC, KC_FN6,    KC_LCTL, KC_FN12, KC_KANA, KC_ESC, KC_ENT, KC_PGDN}	\ 
   }, \
 
   { /* FN layer 4, hardwark dvorak of layer 2 */
@@ -67,7 +67,7 @@ const uint16_t PROGMEM fn_actions[] = {
 
   [11]  = ACTION_LAYER_TAP_KEY(1, KC_SPC), // FN11, to Fn overlap or space
   [12]  = ACTION_LAYER_TAP_KEY(4, KC_SPC), // FN12, to Fn overlap or space
-  [12]  = ACTION_LAYER_TAP_KEY(1, KC_BSPC), // FN12, to Fn overlap or space
+  [13]  = ACTION_LAYER_TAP_KEY(1, KC_BSPC), // FN13, to Fn overlap or backspace
 };
 
 void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
