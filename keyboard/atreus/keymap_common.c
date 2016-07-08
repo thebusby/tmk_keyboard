@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {	\
     {KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,                                      KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12 }, \
     {KC_NO, KC_0, KC_NO, KC_NO, KC_NO, MY_BRUP,                                     KC_VOLU, KC_MEDIA_REWIND, KC_MPLY, KC_MEDIA_FAST_FORWARD, KC_NO, KC_NO}, \
     {KC_FN5, KC_VOLU, KC_VOLD, KC_MPLY, KC_AUDIO_MUTE, MY_BRDN,                     KC_VOLD, KC_MUTE, KC_NO, KC_NO, KC_NO, KC_FN3}, \
-    {KC_NO, KC_NO, KC_TRNS, KC_FN3, KC_FN0, KC_FN0,                                 KC_FN2, KC_FN2, KC_NO, KC_FN3, KC_RALT, KC_PGDN} \
+    {KC_NO, KC_FN2, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                              KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_FN2, KC_PGDN} \
   },									\
 
   { /* FN layer 3, hardware dvorak of layer 1 */
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {	\
 
   { /* FN layer 4, hardware dvorak of layer 2 */
     {KC_GRAVE, KC_1, KC_2, KC_3, KC_4, KC_5,                                            KC_6, KC_7, KC_8, KC_9, KC_0, KC_RBRACKET }, \
-    {KC_TRNS, KC_FN23, KC_FN24, KC_FN25, KC_FN26, KC_FN27,                              KC_PGUP, KC_MINUS, KC_EQUAL, KC_FN28, KC_FN29, KC_BSLASH}, \
+    {KC_TRNS, KC_FN23, KC_FN24, KC_FN25, KC_FN26, KC_FN27,                              KC_PGUP, KC_LBRACKET, KC_RBRACKET, KC_FN21, KC_FN22, KC_BSLASH}, \
     {KC_TRNS, KC_FN30, KC_FN31, KC_LEFT, KC_RIGHT, KC_RBRACKET,                         KC_PGDN, KC_UP, KC_DOWN, KC_DOT, KC_SLSH, KC_FN10}, \
     {KC_TRNS, KC_TRNS, KC_FN7, KC_TRNS, KC_TRNS, KC_TRNS,                               KC_TRNS, KC_TRNS, KC_TRNS, KC_FN7, KC_TRNS, KC_TRNS} \
   },								       \
@@ -64,8 +64,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {	\
   { /* FN layer 5, F# and media keys */
     {KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,                                      KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12 }, \
     {KC_NO, KC_0, KC_NO, KC_NO, KC_NO, MY_BRUP,                                     KC_VOLU, KC_MEDIA_REWIND, KC_MPLY, KC_MEDIA_FAST_FORWARD, KC_NO, KC_NO}, \
-    {KC_FN10, KC_VOLU, KC_VOLD, KC_MPLY, KC_AUDIO_MUTE, MY_BRDN,                     KC_VOLD, KC_MUTE, KC_NO, KC_NO, KC_NO, KC_FN3}, \
-    {KC_NO, KC_NO, KC_TRNS, KC_FN3, KC_FN0, KC_FN0,                                 KC_FN8, KC_FN8, KC_NO, KC_FN3, KC_RALT, KC_PGDN} \
+    {KC_FN10, KC_VOLU, KC_VOLD, KC_MPLY, KC_AUDIO_MUTE, MY_BRDN,                    KC_VOLD, KC_MUTE, KC_NO, KC_NO, KC_NO, KC_FN3}, \
+    {KC_NO, KC_FN8, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                              KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_FN8, KC_PGDN} \
   },									\
 };
 
@@ -122,6 +122,8 @@ const uint16_t PROGMEM fn_actions[] = {
   [20]  = ACTION_LAYER_TAP_KEY(4, KC_BSPC), // FN20, to Fn overlap or backspace
   
   // Handle "shifted" keys
+  [21]  = ACTION_MODS_KEY(MOD_LSFT, KC_LBRACKET),
+  [22]  = ACTION_MODS_KEY(MOD_LSFT, KC_RBRACKET),
   [23]  = ACTION_MODS_KEY(MOD_LSFT, KC_8),
   [24]  = ACTION_MODS_KEY(MOD_LSFT, KC_7),
   [25]  = ACTION_MODS_KEY(MOD_LSFT, KC_9),
