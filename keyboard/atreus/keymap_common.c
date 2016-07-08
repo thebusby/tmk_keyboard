@@ -30,14 +30,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {	\
     {KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T,                                      KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC }, \
     {KC_FN15, KC_A, KC_S, KC_D, KC_F, KC_G,                                      KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT}, \
     {KC_LALT, KC_Z, KC_X, KC_C, KC_V, KC_B,                                      KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_0}, \
-    {KC_LGUI, KC_DELETE, KC_ESC, MY_RO, KC_FN16, KC_FN13,                        KC_FN14, KC_FN11, MY_KANA, KC_ESC, KC_ENT, KC_PGDN} \
+    {KC_LGUI, KC_FN17, KC_ESC, MY_RO, KC_FN16, KC_FN13,                        KC_FN14, KC_FN11, MY_KANA, KC_ESC, KC_ENT, KC_PGDN} \
   }, \
 
   { /* FN layer 1, numbers, arrows, and extended punctuation */
     {KC_GRAVE, KC_1, KC_2, KC_3, KC_4, KC_5,                                            KC_6, KC_7, KC_8, KC_9, KC_0, KC_RBRACKET }, \
     {KC_TRNS, KC_FN23, KC_FN24, KC_FN25, KC_FN26, KC_FN27,                              KC_PGUP, KC_MINUS, KC_EQUAL, KC_FN28, KC_FN29, KC_BSLASH}, \
     {KC_TRNS, KC_FN30, KC_FN31, KC_LEFT, KC_RIGHT, KC_RBRACKET,                         KC_PGDN, KC_UP, KC_DOWN, KC_DOT, KC_SLSH, KC_FN5}, \
-    {KC_TRNS, KC_BSPC, KC_FN1, KC_TRNS, KC_TRNS, KC_TRNS,                               KC_TRNS, KC_TRNS, KC_RSFT, KC_FN1, ACTION_MODS_TAP_KEY(KC_RALT, KC_ENT), KC_PGDN} \
+    {KC_TRNS, KC_TRNS, KC_FN1, KC_TRNS, KC_TRNS, KC_TRNS,                               KC_TRNS, KC_TRNS, KC_TRNS, KC_FN1, KC_TRNS, KC_TRNS} \
   },								       \
 
   { /* FN layer 2, F# and media keys */
@@ -49,23 +49,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {	\
 
   { /* FN layer 3, hardware dvorak of layer 1 */
     {KC_TAB,  KC_QUOT, KC_COMM, KC_DOT, KC_P, KC_Y,         KC_F, KC_G, KC_C, KC_R, KC_L, KC_SLASH }, \
-    {KC_LSFT, KC_A, KC_O, KC_E, KC_U, KC_I,                 KC_D, KC_H, KC_T, KC_N, KC_S, KC_MINUS}, \
+    {KC_FN15, KC_A, KC_O, KC_E, KC_U, KC_I,                 KC_D, KC_H, KC_T, KC_N, KC_S, KC_MINUS}, \
     {KC_LALT, KC_SCLN, KC_Q, KC_J, KC_K, KC_X,              KC_B, KC_M, KC_W, KC_V, KC_Z, KC_FN3}, \
-    {KC_LGUI, KC_DELETE, KC_ESC, KC_RO, KC_BSPC, KC_FN6,    KC_LCTL, KC_FN12, KC_KANA, KC_ESC, KC_ENT, KC_PGDN}	\
+    {KC_LGUI, KC_FN17, KC_ESC, KC_RO, KC_FN16, KC_FN20,    KC_FN14, KC_FN18, KC_KANA, KC_ESC, KC_ENT, KC_PGDN} \
   }, \
 
   { /* FN layer 4, hardware dvorak of layer 2 */
     {KC_GRAVE, KC_1, KC_2, KC_3, KC_4, KC_5,                                            KC_6, KC_7, KC_8, KC_9, KC_0, KC_RBRACKET }, \
     {KC_TRNS, KC_FN23, KC_FN24, KC_FN25, KC_FN26, KC_FN27,                              KC_PGUP, KC_MINUS, KC_EQUAL, KC_FN28, KC_FN29, KC_BSLASH}, \
-    {KC_TRNS, KC_FN30, KC_FN31, KC_LEFT, KC_RIGHT, KC_RBRACKET,                         KC_PGDN, KC_UP, KC_DOWN, KC_DOT, KC_SLSH, KC_FN5}, \
-    {KC_TRNS, KC_BSPC, KC_FN1, KC_0, KC_RALT, KC_TRNS,                                  KC_TRNS, KC_TRNS, KC_RSFT, KC_FN1, ACTION_MODS_TAP_KEY(KC_RALT, KC_ENT), KC_PGDN} \
+    {KC_TRNS, KC_FN30, KC_FN31, KC_LEFT, KC_RIGHT, KC_RBRACKET,                         KC_PGDN, KC_UP, KC_DOWN, KC_DOT, KC_SLSH, KC_FN10}, \
+    {KC_TRNS, KC_TRNS, KC_FN7, KC_TRNS, KC_TRNS, KC_TRNS,                               KC_TRNS, KC_TRNS, KC_TRNS, KC_FN7, KC_TRNS, KC_TRNS} \
   },								       \
 
   { /* FN layer 5, F# and media keys */
     {KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,                                      KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12 }, \
-    {KC_NO, KC_0, KC_NO, KC_MEDIA_STOP, KC_NO, KC_AUDIO_VOL_UP,                     KC__VOLUP, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, KC_NO, KC_NO}, \
-    {KC_FN10, KC_NO, KC_NO, KC_MEDIA_STOP, KC_AUDIO_MUTE, KC_AUDIO_VOL_DOWN,        KC__VOLDOWN, KC__MUTE, KC_NO, KC_NO, KC_NO, KC_FN3}, \
-    {KC_NO, KC_NO, KC_NO, KC_NO, KC_FN0, KC_FN0,                                    KC_FN2, KC_FN2, KC_NO, KC_NO, KC_RALT, KC_PGDN} \
+    {KC_NO, KC_0, KC_NO, KC_NO, KC_NO, MY_BRUP,                                     KC_VOLU, KC_MEDIA_REWIND, KC_MPLY, KC_MEDIA_FAST_FORWARD, KC_NO, KC_NO}, \
+    {KC_FN10, KC_VOLU, KC_VOLD, KC_MPLY, KC_AUDIO_MUTE, MY_BRDN,                     KC_VOLD, KC_MUTE, KC_NO, KC_NO, KC_NO, KC_FN3}, \
+    {KC_NO, KC_NO, KC_TRNS, KC_FN3, KC_FN0, KC_FN0,                                 KC_FN8, KC_FN8, KC_NO, KC_FN3, KC_RALT, KC_PGDN} \
   },									\
 };
 
@@ -109,13 +109,18 @@ const uint16_t PROGMEM fn_actions[] = {
   [10] = ACTION_LAYER_OFF(3, 1),      // disable hard dvorak
 
   [11]  = ACTION_LAYER_TAP_KEY(1, KC_SPC),  // FN11, to Fn overlap or space
-  [12]  = ACTION_LAYER_TAP_KEY(4, KC_SPC),  // FN12, to Fn overlap or space
+  // [12]  = ACTION_LAYER_TAP_KEY(4, KC_SPC),  // FN12, to Fn overlap or space
   [13]  = ACTION_LAYER_TAP_KEY(1, KC_BSPC), // FN13, to Fn overlap or backspace
 
   [14]  = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_ENT), // FN14, CTRL or Enter
-  [15]  = ACTION_MODS_ONESHOT(MOD_LSFT), // one shot mod for shift
-  [16]  = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_BSPC), // FN14, CTRL or Enter
+  [15]  = ACTION_MODS_ONESHOT(MOD_LSFT), // FN15, one shot mod for shift
+  [16]  = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_BSPC), // FN16, CTRL or Enter
+  [17]  = ACTION_MODS_TAP_KEY(MOD_LGUI, KC_DELETE), // FN17, CTRL or Enter
 
+  [18]  = ACTION_LAYER_TAP_KEY(4, KC_SPC),  // FN18, to Fn overlap or space
+  // [19]  = ACTION_LAYER_TAP_KEY(4, KC_SPC),  // FN18, to Fn overlap or space
+  [20]  = ACTION_LAYER_TAP_KEY(4, KC_BSPC), // FN20, to Fn overlap or backspace
+  
   // Handle "shifted" keys
   [23]  = ACTION_MODS_KEY(MOD_LSFT, KC_8),
   [24]  = ACTION_MODS_KEY(MOD_LSFT, KC_7),
