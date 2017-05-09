@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {	\
 
   { /* FN layer 4, hardware dvorak of layer 2 */
     {KC_GRAVE, KC_1, KC_2, KC_3, KC_4, KC_5,                                            KC_6, KC_7, KC_8, KC_9, KC_0, KC_RBRACKET }, \
-    {KC_TRNS, KC_FN23, KC_FN24, KC_FN25, KC_FN26, KC_FN27,                              KC_PGUP, KC_LBRACKET, KC_RBRACKET, KC_FN21, KC_FN22, KC_BSLASH}, \
+    {KC_TRNS, KC_FN23, KC_FN24, KC_FN25, KC_FN26, KC_FN27,                              KC_PGUP, KC_MINUS, KC_EQUAL, KC_FN28, KC_FN29, KC_BSLASH}, \
     {KC_TRNS, KC_FN30, KC_FN31, KC_LEFT, KC_RIGHT, KC_RBRACKET,                         KC_PGDN, KC_UP, KC_DOWN, KC_DOT, KC_SLSH, KC_FN10}, \
     {KC_TRNS, KC_TRNS, KC_FN7, KC_TRNS, KC_TRNS, KC_TRNS,                               KC_TRNS, KC_TRNS, KC_TRNS, KC_FN7, KC_TRNS, KC_TRNS} \
   },								       \
